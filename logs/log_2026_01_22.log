@@ -16,3 +16,9 @@
 [ 2026-01-22 12:07:03,432 ] INFO : Summarization completed successfully
 [ 2026-01-22 12:07:43,698 ] INFO : Starting text summarization
 [ 2026-01-22 12:07:43,700 ] INFO : Summarization completed successfully
+[ 2026-01-22 12:18:17,993 ] INFO : Loading abstractive summarization model
+[ 2026-01-22 12:18:19,586 ] WARNING : Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[ 2026-01-22 12:22:46,049 ] WARNING : Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[ 2026-01-22 12:22:48,998 ] INFO : Generating abstractive summary
+[ 2026-01-22 12:29:50,693 ] INFO : Loading abstractive summarization model
+[ 2026-01-22 12:29:54,638 ] INFO : Generating abstractive summary

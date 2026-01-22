@@ -4,3 +4,6 @@ scikit-learn
 fastapi
 uvicorn
 rouge-score
+transformers
+torch
+sentencepiece
