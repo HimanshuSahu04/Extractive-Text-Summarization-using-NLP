@@ -19,4 +19,6 @@ The project is built with a **modular Python architecture** and exposed via a **
 
 ---
 
-## 📂 Project Structure
+## 🔄 Project Workflow
+
+![Project Workflow Diagram](diagrams/workflow.png)
