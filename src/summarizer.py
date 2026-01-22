@@ -25,6 +25,7 @@ class ExtractiveSummarizer:
             summary = " ".join([sentences[i] for i in ranked_indices])
 
             logger.info("Summarization completed successfully")
+            
             return summary
 
         except Exception as e:
