@@ -37,7 +37,11 @@ if st.button("Generate Summary"):
 
             else:
                 summarizer = AbstractiveSummarizer()
-                summary = summarizer.generate_summary(text)
+                summary = summarizer.generate_summary(
+                    text,
+                    sentences=num_sentences
+                )
+
 
         st.subheader("📄 Summary")
         st.success(summary)

@@ -24,3 +24,259 @@
 [ 2026-01-22 12:29:54,638 ] INFO : Generating abstractive summary
 [ 2026-01-22 12:34:56,073 ] INFO : Loading abstractive summarization model
 [ 2026-01-22 12:35:00,098 ] INFO : Generating abstractive summary
+[ 2026-01-22 13:24:48,481 ] INFO : Using device: GPU
+[ 2026-01-22 13:24:50,939 ] ERROR : Model loading failed: Could not load model sshleifer/distilbart-cnn-12-6 with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSeq2SeqLM'>, <class 'transformers.models.bart.modeling_bart.BartForConditionalGeneration'>). See the original errors:
+
+while loading with AutoModelForSeq2SeqLM, an error is thrown:
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 293, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\models\auto\auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 4962, in from_pretrained
+    config, dtype, dtype_orig = _get_dtype(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 1250, in _get_dtype
+    state_dict = load_state_dict(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\utils\import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 311, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **fp32_kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\models\auto\auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\utils\import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+while loading with BartForConditionalGeneration, an error is thrown:
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 293, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 4962, in from_pretrained
+    config, dtype, dtype_orig = _get_dtype(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 1250, in _get_dtype
+    state_dict = load_state_dict(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\utils\import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 311, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **fp32_kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\utils\import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+
+
+[ 2026-01-22 13:31:28,318 ] INFO : Using device: GPU
+[ 2026-01-22 13:31:33,366 ] ERROR : Model loading failed: Could not load model sshleifer/distilbart-cnn-12-6 with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSeq2SeqLM'>, <class 'transformers.models.bart.modeling_bart.BartForConditionalGeneration'>). See the original errors:
+
+while loading with AutoModelForSeq2SeqLM, an error is thrown:
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 293, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\models\auto\auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 4962, in from_pretrained
+    config, dtype, dtype_orig = _get_dtype(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 1250, in _get_dtype
+    state_dict = load_state_dict(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\utils\import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 311, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **fp32_kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\models\auto\auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\utils\import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+while loading with BartForConditionalGeneration, an error is thrown:
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 293, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 4962, in from_pretrained
+    config, dtype, dtype_orig = _get_dtype(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 1250, in _get_dtype
+    state_dict = load_state_dict(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\utils\import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 311, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **fp32_kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 5316, in _load_pretrained_model
+    load_state_dict(checkpoint_files[0], map_location="meta", weights_only=weights_only).keys()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 508, in load_state_dict
+    check_torch_load_is_safe()
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\utils\import_utils.py", line 1647, in check_torch_load_is_safe
+    raise ValueError(
+ValueError: Due to a serious vulnerability issue in `torch.load`, even with `weights_only=True`, we now require users to upgrade torch to at least v2.6 in order to use the function. This version restriction does not apply when loading files with safetensors.
+See the vulnerability report here https://nvd.nist.gov/vuln/detail/CVE-2025-32434
+
+
+
+[ 2026-01-22 14:21:20,119 ] INFO : Using device: GPU
+[ 2026-01-22 14:21:22,063 ] ERROR : Model loading failed
+Traceback (most recent call last):
+  File "C:\Users\sahua\Downloads\extractive_text_summarization\src\abstractive_summarizer.py", line 18, in __init__
+    self.summarizer = pipeline(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\__init__.py", line 1027, in pipeline
+    framework, model = infer_framework_load_model(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 333, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model sshleifer/distilbart-cnn-12-6 with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSeq2SeqLM'>, <class 'transformers.models.bart.modeling_bart.BartForConditionalGeneration'>). See the original errors:
+
+while loading with AutoModelForSeq2SeqLM, an error is thrown:
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 293, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\models\auto\auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 1057, in _get_resolved_checkpoint_files
+    raise OSError(
+OSError: sshleifer/distilbart-cnn-12-6 does not appear to have a file named model.safetensors or model.safetensors.index.json and thus cannot be loaded with `safetensors`. Please make sure that the model has been saved with `safe_serialization=True` or do not set `use_safetensors=True`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 311, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **fp32_kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\models\auto\auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 1057, in _get_resolved_checkpoint_files
+    raise OSError(
+OSError: sshleifer/distilbart-cnn-12-6 does not appear to have a file named model.safetensors or model.safetensors.index.json and thus cannot be loaded with `safetensors`. Please make sure that the model has been saved with `safe_serialization=True` or do not set `use_safetensors=True`.
+
+while loading with BartForConditionalGeneration, an error is thrown:
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 293, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 1057, in _get_resolved_checkpoint_files
+    raise OSError(
+OSError: sshleifer/distilbart-cnn-12-6 does not appear to have a file named model.safetensors or model.safetensors.index.json and thus cannot be loaded with `safetensors`. Please make sure that the model has been saved with `safe_serialization=True` or do not set `use_safetensors=True`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\pipelines\base.py", line 311, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **fp32_kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "C:\Users\sahua\anaconda3\envs\summarizer_gpu\lib\site-packages\transformers\modeling_utils.py", line 1057, in _get_resolved_checkpoint_files
+    raise OSError(
+OSError: sshleifer/distilbart-cnn-12-6 does not appear to have a file named model.safetensors or model.safetensors.index.json and thus cannot be loaded with `safetensors`. Please make sure that the model has been saved with `safe_serialization=True` or do not set `use_safetensors=True`.
+
+
+
+[ 2026-01-22 14:23:03,030 ] INFO : Using device: GPU
+[ 2026-01-22 14:23:04,468 ] WARNING : Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[ 2026-01-22 14:33:56,287 ] INFO : Using device: GPU
+[ 2026-01-22 14:36:28,284 ] INFO : Using device: GPU
+[ 2026-01-22 14:36:48,894 ] INFO : Using device: GPU
+[ 2026-01-22 14:37:00,522 ] INFO : Using device: GPU
+[ 2026-01-22 14:37:10,074 ] INFO : Using device: GPU
+[ 2026-01-22 14:37:18,576 ] INFO : Starting text summarization
+[ 2026-01-22 14:37:18,633 ] INFO : Summarization completed successfully
+[ 2026-01-22 14:37:20,854 ] INFO : Starting text summarization
+[ 2026-01-22 14:37:20,856 ] INFO : Summarization completed successfully
+[ 2026-01-22 14:37:24,252 ] INFO : Starting text summarization
+[ 2026-01-22 14:37:24,252 ] INFO : Summarization completed successfully
+[ 2026-01-22 14:37:27,105 ] INFO : Starting text summarization
+[ 2026-01-22 14:37:27,107 ] INFO : Summarization completed successfully
+[ 2026-01-22 14:37:35,045 ] INFO : Starting text summarization
+[ 2026-01-22 14:37:35,047 ] INFO : Summarization completed successfully
+[ 2026-01-22 14:37:42,589 ] INFO : Using device: GPU
+[ 2026-01-22 14:38:34,500 ] INFO : Using device: GPU
+[ 2026-01-22 14:38:54,248 ] INFO : Using device: GPU
+[ 2026-01-22 14:39:10,979 ] INFO : Starting text summarization
+[ 2026-01-22 14:39:10,983 ] INFO : Summarization completed successfully
+[ 2026-01-22 14:40:03,702 ] INFO : Starting text summarization
+[ 2026-01-22 14:40:03,710 ] INFO : Summarization completed successfully
+[ 2026-01-22 14:40:22,382 ] INFO : Using device: GPU
+[ 2026-01-22 14:46:30,659 ] INFO : Using device: GPU
+[ 2026-01-22 14:46:46,126 ] INFO : Using device: GPU
+[ 2026-01-22 14:47:09,775 ] INFO : Using device: GPU
+[ 2026-01-22 14:47:51,634 ] INFO : Using device: GPU
+[ 2026-01-22 14:48:32,889 ] INFO : Starting text summarization
+[ 2026-01-22 14:48:32,916 ] INFO : Summarization completed successfully
